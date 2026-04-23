@@ -1,9 +1,11 @@
 var output = "";
-var username = "guest";
+if (localStorage.getItem('username') === null) {
+    localStorage.setItem('username', "guest");
+}
 // Function to show popup on every reload
 window.onload = function() {
-    document.getElementById("changeUsername").value = username;
-    document.getElementById("usernameoutput").value = username;
+    document.getElementById("changeUsername").value = localStorage.getItem('username');
+    document.getElementById("usernameoutput").value = localStorage.getItem('username');
 };
 
 // Function to hide popup and set cookie
@@ -31,13 +33,13 @@ function buy(){
 }
 function complaint(){
     output += document.getElementById("input").value;
-    output += " ----------- "+username;
+    output += " ----------- "+localStorage.getItem('username');
     output += "<br>";
     document.getElementById("complaint_output").innerHTML = output;
     document.getElementById("input").value = "";
 }
 function changeUsername(){
-    username = document.getElementById("changeUsername").value;
+    localStorage.setItem('username',document.getElementById("changeUsername").value);
 }
 function loadcart(){
     var item = localStorage.getItem("item");
@@ -82,5 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check if the current URL ends with 'target-page.html'
     if (window.location.pathname.includes('index.html')) {
         window.location.href = 'checkout.html';
+    }
+});
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if the current URL ends with 'target-page.html'
+    if (window.location.pathname.includes('thanks.html')) {
+        document.getElementById("title").innerHTML += " "+localStorage.getItem('username')+"!";
     }
 });
