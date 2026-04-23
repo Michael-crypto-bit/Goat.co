@@ -1,11 +1,6 @@
-
 var output = "";
 if (localStorage.getItem('username') === null) {
     localStorage.setItem('username', "guest");
-}
-window.onload = function() {
-    var savedName = localStorage.getItem('username');
-    document.getElementById("changeUsername").value = savedName;
 }
 // Function to show popup on every reload
 window.onload = function() {
@@ -88,7 +83,7 @@ function checkout(){
 document.addEventListener('DOMContentLoaded', () => {
     // Check if the current URL ends with 'target-page.html'
     if (window.location.pathname.includes('index.html')) {
-        window.location.href = 'checkout.html';
+        window.location.href = 'home.html';
     }
 });
 document.addEventListener('DOMContentLoaded', () => {
