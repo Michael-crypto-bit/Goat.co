@@ -28,7 +28,7 @@ function goatpicture(){
     localStorage.setItem('cost', '4.99');
     window.location.href = 'goatpicture.html';
 }
-function goatpicture(){
+function goat3d(){
         localStorage.setItem('item', '0002');
     localStorage.setItem('cost', '9.49');
     window.location.href = 'goat3d.html';
