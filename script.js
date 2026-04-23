@@ -78,3 +78,9 @@ function checkout(){
         document.getElementById("card").value = "";
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if the current URL ends with 'target-page.html'
+    if (window.location.pathname.includes('index.html')) {
+        window.location.href = 'checkout.html';
+    }
+});
