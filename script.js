@@ -24,9 +24,14 @@ function cart(){
     window.location.href = 'checkout.html';
 }
 function goatpicture(){
-    window.location.href = 'goatpicture.html';
-    localStorage.setItem('item', '0001');
+        localStorage.setItem('item', '0001');
     localStorage.setItem('cost', '4.99');
+    window.location.href = 'goatpicture.html';
+}
+function goatpicture(){
+        localStorage.setItem('item', '0002');
+    localStorage.setItem('cost', '9.49');
+    window.location.href = 'goat3d.html';
 }
 function buy(){
     window.location.href = 'checkout.html';
