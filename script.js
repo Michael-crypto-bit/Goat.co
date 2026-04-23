@@ -97,3 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("title").innerHTML += " "+localStorage.getItem('username')+"!";
     }
 });
+function nope(){
+    const response = confirm("nope");
+}
