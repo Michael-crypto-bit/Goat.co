@@ -8,18 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
     <img src="goat.jpg" alt="goat logo" id="goat_logo">
-<button onclick="home()">home</button><button>products</button><button onclick="cart()">cart</button><button>help</button>
-<center>
-<h1>Products</h1>
-<div id="productone">
-<img src="goat.jpg" alt="goat picture" id="product1" onclick="goatpicture()">
-<p id="product1tag" onclick="goatpicture()">Goat Picture</p>
-</div>
-<div id="productone">
-<img src="goat2.jpg" alt="3d printed goat" id="product1" onclick="goatpicture()">
-<p id="product1tag" onclick="goat3d()">3D printed goat</p>
-</div>
+<button onclick="home()">home</button><button onclick="products()">products</button><button onclick="cart()">cart</button><button>help</button>
+    <center><img src="goat2.jpg" alt="goat logo" id="goatpicture">
+<p id="producttag">Goat Picture</p>
 
    <div id="cookie-popup" style="display: none; position: fixed; bottom: 0; width: 100%; background: #807a7a; color: white; padding: 20px; text-align: center; z-index: 9999;">
     This website uses cookies to ensure you get the best experience.
@@ -29,6 +23,9 @@
     <p>username:</p><input id="changeUsername" onchange="changeUsername()">
 </div>
     </center>
+<div id="buy">
+    <button onclick="buy()">buy now</button>
+</div>
 
 
     <!-- Link to external JavaScript -->
