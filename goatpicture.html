@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goat.co</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <img src="goat.jpg" alt="goat logo" id="goat_logo">
+<button onclick="home()">home</button><button onclick="products()">products</button><button onclick="cart()">cart</button><button>help</button>
+    <center><img src="goat.jpg" alt="goat logo" id="goatpicture">
+<p id="producttag">Goat Picture</p>
+
+   <div id="cookie-popup" style="display: none; position: fixed; bottom: 0; width: 100%; background: #807a7a; color: white; padding: 20px; text-align: center; z-index: 9999;">
+    This website uses cookies to ensure you get the best experience.
+    <button onclick="acceptCookies()" style="margin-left: 15px; padding: 5px 10px; cursor: pointer;">Accept</button>
+</div>
+<div id="changeusername">
+    <p>username:</p><input id="changeUsername" onchange="changeUsername()">
+</div>
+    </center>
+<div id="buy">
+    <button onclick="buy()" id="001">buy now</button>
+</div>
+
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

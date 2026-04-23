@@ -1,0 +1,62 @@
+button{
+width: 22.5vw;
+height: 3vw;
+background-color: aliceblue;
+}
+button:hover{
+background-color: rgb(180, 197, 197);
+  cursor: pointer;
+}
+#input{
+width: 22.5vw;
+height: 2.5vw;
+}
+#goat_logo{
+    width: 7vw;
+    cursor: auto;
+}
+#cookie-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+}
+#cookie-popup button {
+  background: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#heading{
+    cursor: default;
+}
+#changeusername{
+    position: fixed;
+    top: 1vw;
+    right: 1vw;
+}
+#product1tag{
+    padding-right: 500px;
+    cursor: pointer;
+}
+#product1{
+    cursor: pointer;
+    padding-right: 500px;
+}
+#producttag{
+    padding-right: 0px;
+    cursor: text;
+}
+#goatpicture{
+    padding-top: 100px;
+}
+#buy{
+    padding-right: 2px;
+}
+#charging{
+    border-radius: 1px;
+    border-color: black;
+    position: fixed;
+    right: 8vw;
+}
