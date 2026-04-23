@@ -1,6 +1,11 @@
+
 var output = "";
 if (localStorage.getItem('username') === null) {
     localStorage.setItem('username', "guest");
+}
+window.onload = function() {
+    var savedName = localStorage.getItem('username');
+    document.getElementById("changeUsername").value = savedName;
 }
 // Function to show popup on every reload
 window.onload = function() {
