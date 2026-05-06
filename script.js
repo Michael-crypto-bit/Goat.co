@@ -1,4 +1,5 @@
 var output = "";
+localStorage.setItem('cookie',false);
 if (localStorage.getItem('username') === null) {
     localStorage.setItem('username', "guest");
 }
@@ -10,9 +11,11 @@ window.onload = function() {
 
 // Function to hide popup and set cookie
 function acceptCookies() {
+    localStorage.setItem('cookie',true);
     document.getElementById("cookie-popup").style.display = "none";
     // Sets a session cookie (expires when browser closes)
-    document.cookie = "cookieAccepted=true; path=/"; 
+    document.cookie = "cookieAccepted=true path=/"; 
+    console.log(localStorage.getItem('cookie'));
 }
 function products(){
     window.location.href = 'products.html';
@@ -69,6 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
         loadcart();
     }
 });
+function loadcard(){
+    document.getElementById("card").value = localStorage.getItem('card');
+}
 function clearcart(){
     localStorage.setItem('item', null);
     localStorage.setItem('cost', null);
@@ -77,12 +83,14 @@ function clearcart(){
 function checkout(){
     var creditcard = document.getElementById("card").value;
     if((creditcard.length >= 13)&&(creditcard.length <= 19)){
+        localStorage.setItem('card', creditcard);
         clearcart();
         document.getElementById("card").value = "";
         window.location.href = 'thanks.html';
     }
     else{
-        document.getElementById("card").value = "";
+        document.getElementById("card").value = "number error";
+        console.log("credit card error fake number")
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
@@ -100,3 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
 function nope(){
     const response = confirm("nope");
 }
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Check if the current URL ends with 'target-page.html'
+//     if ((window.location.pathname.includes('.html'))){
+//         console.log(localStorage.getItem('cookie')+"hi");
+//     if (localStorage.getItem('cookie') == "false"){
+//         document.getElementById("cookie-popup").style.display = '';
+//     // Sets a session cookie (expires when browser closes)
+//     document.cookie = "cookieAccepted=false path=/"; 
+//     }
+//     }
+
+// });
